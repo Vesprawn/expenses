@@ -30,9 +30,6 @@ const UserPage = () => {
     error: expensesError
   } = useGetExpenses(Number(id), timestamp);
 
-
-  console.log('expenses', expenses)
-
   const closeModal = () => {
     setNewExpense('');
     setNewVendor('');

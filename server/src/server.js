@@ -58,8 +58,6 @@ app.get('/users', (req, res) => {
 app.get('/user_expenses/:id', (req, res) => {
   const userId =  req.params.id
 
-  console.log({expenses, userId})
-
   res.send(expenses.filter(a => a.userId === Number(userId)))
 });
 

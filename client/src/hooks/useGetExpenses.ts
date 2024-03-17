@@ -20,17 +20,12 @@ const useGetExpenses = (userId: number, timestamp: number) => {
 
     setIsLoading(true);
 
-    console.log('this is a test')
-
     axios.get(`http://localhost:3001/user_expenses/${userId}`)
     .then((response) => {
-      console.log('response', response);
       setExpenses(response.data);
       setIsLoading(false);
     })
     .catch((err) => {
-
-      console.log('response', err);
       setError(err)
       setIsLoading(false);
     });

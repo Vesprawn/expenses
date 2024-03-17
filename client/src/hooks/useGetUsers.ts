@@ -15,13 +15,10 @@ const useGetUsers = () => {
     setIsLoading(true);
 
     axios.get('http://localhost:3001/users').then((response) => {
-      console.log('response', response);
       setUsers(response.data);
       setIsLoading(false);
     })
     .catch((err) => {
-
-      console.log('response', err);
       setError(err)
       setIsLoading(false);
     });
